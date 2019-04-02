@@ -11,8 +11,12 @@ add_executable(
         ${PROJECT_NAME}
         main.cpp
         server/src/Server.cpp
+        server/src/RequestHandlerFactory.cpp
+        server/src/Handler.cpp
+        server/src/ErrorHandler.cpp
         server/src/HomeHandler.cpp
         server/src/PostHandler.cpp
-        server/src/RequestHandlerFactory.cpp server/src/ErrorHandler.cpp)
+
+)
 
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
