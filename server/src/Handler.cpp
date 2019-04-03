@@ -5,6 +5,7 @@
 #include "../include/Handler.hpp"
 
 void Handler::handleRequest(Poco::Net::HTTPServerRequest &request, Poco::Net::HTTPServerResponse &response) {
+
     Poco::URI uri(request.getURI());
 
     std::string method = request.getMethod();
@@ -13,4 +14,6 @@ void Handler::handleRequest(Poco::Net::HTTPServerRequest &request, Poco::Net::HT
 
     response.setStatus(Poco::Net::HTTPResponse::HTTP_OK);
     response.setContentType("application/json");
+    response.send() << "{ success: true }";
 }
+

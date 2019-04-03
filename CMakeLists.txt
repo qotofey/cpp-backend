@@ -13,10 +13,8 @@ add_executable(
         server/src/Server.cpp
         server/src/RequestHandlerFactory.cpp
         server/src/Handler.cpp
-        server/src/ErrorHandler.cpp
-        server/src/HomeHandler.cpp
-        server/src/PostHandler.cpp
 
+        app/controller/src/BaseConstroller.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})

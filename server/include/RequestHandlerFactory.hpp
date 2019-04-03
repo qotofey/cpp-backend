@@ -6,6 +6,7 @@
 
 #include <Poco/Net/HTTPRequestHandlerFactory.h>
 #include <Poco/Net/HTTPServerRequest.h>
+#include "Handler.hpp"
 #include "ErrorHandler.hpp"
 #include "HomeHandler.hpp"
 #include "PostHandler.hpp"

@@ -4,15 +4,18 @@
 
 #pragma once
 
-class BaseController : public Poco::Net::HTTPRequestHandler {
+#include "../../../server/include/Handler.hpp"
+
+class BaseController {
 
 public:
-    void handleRequest(Poco::Net::HTTPServerRequest &request, Poco::Net::HTTPServerResponse &response) override;
+    BaseController();
+    ~BaseController();
 
-    virtual void index();
-    virtual void show();
-    virtual void create();
-    virtual void update();
-    virtual void destroy();
+    Handler *index();
+//    Handler *show();
+//    Handler create();
+//    Handler update();
+//    Handler destroy();
 
 };

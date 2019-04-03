@@ -1,5 +1,5 @@
 //
-// Created by Тимофей Юрьевич Шуфлетюк on 2019-04-01.
+// Created by Тимофей Юрьевич Шуфлетюк on 2019-04-03.
 //
 
 #pragma once
@@ -14,7 +14,7 @@
 #include <string>
 #include <iostream>
 
-class ErrorHandler : public Poco::Net::HTTPRequestHandler {
+class Handler : public Poco::Net::HTTPRequestHandler {
 
 public:
     void handleRequest(Poco::Net::HTTPServerRequest &request, Poco::Net::HTTPServerResponse &response) override;
