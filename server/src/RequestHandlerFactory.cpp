@@ -3,7 +3,6 @@
 //
 
 #include "../include/RequestHandlerFactory.hpp"
-#include "../../app/controller/include/BaseController.hpp"
 
 Poco::Net::HTTPRequestHandler *RequestHandlerFactory::createRequestHandler(const Poco::Net::HTTPServerRequest &request) {
     //    using Poco::Net::HTTPRequest;
@@ -12,18 +11,12 @@ Poco::Net::HTTPRequestHandler *RequestHandlerFactory::createRequestHandler(const
     const auto &method = request.getMethod();
     const auto &uri = request.getURI();
 
-//    if (uri == "/") {
-//        result = new Handler();
-//    } else if (uri == "/posts") {
-//        result = new PostHandler();
-//    }
-    BaseController *controller = new BaseController(new Handler());
     if (uri == "/") {
-        result = controller->index();
+        result = new Handler(new Controller());
     }
 
     if (result == nullptr) {
-        result = new Handler();
+        result = new Handler(new Controller());
     }
 
     return result;

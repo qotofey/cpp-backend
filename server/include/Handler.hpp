@@ -14,9 +14,16 @@
 #include <string>
 #include <iostream>
 
+#include "Controller.hpp"
+
 class Handler : public Poco::Net::HTTPRequestHandler {
 
+private:
+    Controller *m_controller;
+
 public:
+    Handler(Controller *controller);
+
     void handleRequest(Poco::Net::HTTPServerRequest &request, Poco::Net::HTTPServerResponse &response) override;
 
 };

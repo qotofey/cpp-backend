@@ -7,15 +7,12 @@
 #include <Poco/Net/HTTPRequestHandlerFactory.h>
 #include <Poco/Net/HTTPServerRequest.h>
 #include "Handler.hpp"
-#include "ErrorHandler.hpp"
-#include "HomeHandler.hpp"
-#include "PostHandler.hpp"
+#include "Controller.hpp"
 
 
 class RequestHandlerFactory : public Poco::Net::HTTPRequestHandlerFactory {
 
 private:
-
     Poco::Net::HTTPRequestHandler *createRequestHandler(const Poco::Net::HTTPServerRequest &request) override;
 
 };

@@ -13,8 +13,7 @@ add_executable(
         server/src/Server.cpp
         server/src/RequestHandlerFactory.cpp
         server/src/Handler.cpp
-
-        app/controller/src/BaseConstroller.cpp
+        server/src/Controller.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
