@@ -1,2 +1,2 @@
 # cpp-backend
-C++ | Poco | Backend | Blog
+C++ | Poco | Backend | Server
