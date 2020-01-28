@@ -1,2 +1,2 @@
-# cpp-blog-backend
+# cpp-backend
 C++ | Poco | Backend | Blog
